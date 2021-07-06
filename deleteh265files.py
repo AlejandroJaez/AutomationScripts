@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from pprint import pprint
 
-files = glob.glob('E:\Videos' + '/**/*.mp4', recursive=True)
+files = glob.glob('E:/Videos' + '/**/*.mkv', recursive=True)
 for file in files:
     try:
         info = subprocess.check_output(['ffprobe', '-show_format', '-show_streams', '-loglevel', 'quiet', '-print_format', 'json', file])
