@@ -4,6 +4,13 @@ import json
 from pathlib import Path
 from pprint import pprint
 
+files = []
+extensions = ('mkv','mp4')
+
+for ext in extensions:
+    files = files + glob.glob('E:/Videos' + f'/**/*.{ext}', recursive=True)
+
+
 files = glob.glob('E:/Videos' + '/**/*.mkv', recursive=True)
 for file in files:
     try:
